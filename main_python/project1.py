@@ -7,7 +7,7 @@ def get_weather(city):
         response = requests.get(BASE_URL, params={
             'q': city,
             'appid': API_KEY,
-            'units': 'standard'
+            'units': 'imperial'
         })
         response.raise_for_status()
         data = response.json()
