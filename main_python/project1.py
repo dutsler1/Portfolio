@@ -9,7 +9,7 @@ def get_weather(city):
             'appid': API_KEY,
             'units': 'standard'
         })
-        response.raise_for_for_status()
+        response.raise_for_status()
         data = response.json()
 
         temp = data['main']['temp']
@@ -28,6 +28,6 @@ def get_weather(city):
     except Exception as e:
         print(f'An error occured: {e}')
 
-    if __name__ == '__main__':
-        city = input('Enter city name: ')
-        get_weather(city)
+if __name__ == '__main__':
+    city = input('Enter city name: ')
+    get_weather(city)
