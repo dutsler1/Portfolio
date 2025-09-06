@@ -11,9 +11,8 @@ def get_weather(city):
         })
         response.raise_for_status()
         data = response.json()
-
-        if response.status_code != 200 or data.get('cod') != 200 and data.get('cod') != '200':
-            print('City not found. Please check the city name and try again.')
+        if str(data.get('cod')) != '200' or 'main' not in data:
+            print("city not found please check spelling")   
             return
 
         temp = data['main']['temp']
