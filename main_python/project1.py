@@ -11,7 +11,9 @@ def get_weather(city):
         })
         response.raise_for_status()
         data = response.json()
-        if "name" not in data or data['name'].lower() != 
+        if "name" not in data or data['name'].lower() != city.lower():
+            print(f'City "{city}" not found. Please check the name and try again.')
+            return
 
         temp = data['main']['temp']
         description = data['weather'][0]['description']
