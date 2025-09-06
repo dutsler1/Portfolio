@@ -25,7 +25,7 @@ def get_weather(city):
 
     except requests.exceptions.HTTPError as http_err:
         print('City not found. please check the city name and try again.')
-    except exception as e:
+    except Exception as e:
         print(f'An error occured: {e}')
 
     if __name__ == '__main__':
