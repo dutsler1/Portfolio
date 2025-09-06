@@ -12,6 +12,10 @@ def get_weather(city):
         response.raise_for_status()
         data = response.json()
 
+        if response.status_code != 200 or data.get('cod') != 200 and data.get('cod') != '200':
+            print('City not found. Please check the city name and try again.')
+            return
+
         temp = data['main']['temp']
         description = data['weather'][0]['description']
         humidity = data['main']['humidity']
@@ -23,8 +27,6 @@ def get_weather(city):
         print(f'Feels like: {feels_like}°F')
         print(f'Humidity: {humidity}%')
 
-    except requests.exceptions.HTTPError as http_err:
-        print('City not found. please check the city name and try again.')
     except Exception as e:
         print(f'An error occured: {e}')
 
