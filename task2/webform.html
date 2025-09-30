@@ -1,0 +1,65 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Webform</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <header class="webformheader">
+            <nav><a href="capitalcity.html" target="_blank">Denver Colorado</a> 
+            <a href="noncapital1.html" target="_blank">Parker Colorado</a>
+            <a href="noncapital2.html" target="_blank">Aurora Colorado</a>
+            <a href="hompage.html" target="_blank">Homepage</a>
+            </nav>
+            <h1><strong>Contact Me</strong></h1>
+            </header>
+        <main>
+            <section class="webformsection">
+                <form id="contactform">
+                    <label for="firstName">First name:</label>
+                    <input type="text" id="firstName" name="firstName" required><br>
+
+                    <label for="lastName">Last name:</label>
+                    <input type="text" id="lastName" name="lastName" required><br>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required><br>
+
+                    <label for="confirmEmail">Confirm Email:</label>
+                    <input type="email" id="confirmEmail" name="confirmEmail" required><br>
+
+                    <label for="question">Question:</label>
+                    <textarea id="question" name="question" rows="5" cols="30" required></textarea><br>
+
+                    <button type="button" id="submitbtn">Submit</button>
+                </form>
+            </sectiion>
+            <script>
+                let submitbtn = document.getElementById("submitbtn");
+                submitbtn.addEventListener("click", function() {
+                    checkEmails();
+                }); 
+                function checkEmails() {
+                    let email = document.getElementById("email").value;
+                    let confirmEmail = document.getElementById("confirmEmail").value;
+
+                    if (email !== confirmEmail) {
+                        alert("Email does not match.");
+                    }
+                    else {
+                        alert("Emails matched. The form was submitted.");
+                    }
+                } 
+
+            </script>
+            <aside class="webformaside">
+                <p>Thank you for visiting my webpage, please fill out the form above and leave a message on what I can improve!</p>
+            </aside>
+            <nav><img src="images/colorado overview.jpg" id="webformimage" alt="colorado overview">
+            </nav>
+
+        
+    </body>
+    </html>

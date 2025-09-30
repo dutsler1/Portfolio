@@ -1,0 +1,224 @@
+#homepagebody {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #908e8e;
+}
+#homepageheader {
+    text-align: center;
+    text-decoration: underline;
+    color: #2e2e2e;
+    font-size: 40px;
+}
+#navlinks {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+    
+}
+#navlinks a:hover {
+    color: red;
+}
+#navlinks2 a:hover {
+    color: red;
+}
+.denverh1 {
+    text-align: center;
+    color: blue;
+    font-size: 60px ;
+
+}
+.denverbody {
+    background-color: #2e2e2e;
+}
+.denverfooter {
+    background-color: white;
+    font-size: 20px;
+    display:flex;
+    gap: 30px;
+    justify-content: center;
+    clear: both;
+
+}
+.coorsimage {
+    object-fit: cover;
+    width: 600px;
+    height: 400px;
+    border: 2px solid black;
+    float: right;
+
+
+}
+.capitalparagraph {
+    font-size: 20px;
+    position: relative;
+    left: 30px;
+    margin: 20px;
+    color: white;
+    clear: both;
+}
+.denverlist {
+    color: white;
+    position: relative;
+    left: 5px;
+}
+.denverlist li {
+    margin: 40px;
+}
+.citelist {
+    font-size: 12px;
+    color: black;
+    text-align: center;
+    
+}
+h3 {
+    text-decoration: underline;
+    font-size: medium;
+    position: relative;
+    left: 100px;
+}
+#parkerbody {
+    background-image: url("images/parkerimage.jpg");
+    background-size: cover;
+    background-position: center 50px;
+    background-repeat: no-repeat;
+    background-size: 100% 240%;
+
+}  
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.336);
+    z-index: -1; 
+}
+.parkerh1 { 
+    text-align: center;
+    color: black;
+    font-size: 60px ;
+}
+#parkerbody {
+    margin: 20px;
+    color: black;
+    text-decoration: underline;
+    word-spacing: 5px;
+}
+.container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.paragraphparker {
+    word-spacing: 10px;
+    background-color: rgba(255, 255, 255, 0.435);
+    padding-bottom: 20px;
+    font-size: larger;
+}
+.parkerfooter nav {
+    position: center;
+    gap: 30px;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.336);
+}
+.parkercontainer {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 10px 5px;
+    align-items: left;
+    border: black 2px solid;
+    background-color: rgba(255, 255, 255, 0.336);
+    width: 500px;
+
+}
+.question {
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
+}
+.answer {
+    border-bottom: 2px solid black;
+    border-left:2px solid black;
+}
+
+.parkerh3 {
+    text-align: center;
+    font-size: 150%;
+}
+h3 {
+    text-align: center;
+    border: 2px solid black;
+    left: 100px;
+}
+.footer-table {
+    border: 2px solid black;
+    margin-left: 200px;
+    position: relative;
+    bottom: 90px;}
+    
+.footer-table div {
+    border-right: 2px solid black;
+    color: red;
+    text-decoration: none;
+}
+.footer-table td {
+    border-bottom: 2px solid black;
+
+}
+.thirdtd {
+    border-left: 2px solid black;
+}
+th {
+    border-bottom: 2px solid black;
+}
+.auroraheader {
+    text-align: center;
+    background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+    
+}
+.auroraimg {
+    display: block;
+    margin-left: auto;
+    height: auto;
+    width: 50%;
+    border: 2px solid black;
+    position: relative;
+    top:30px;
+}
+.auroraol {
+    max-width: 500px;
+    display: block;
+    position: relative;
+    bottom: 300px;
+    border: 4px solid black;
+    border-radius: 40px;
+    width: fit-content;
+}
+.aurorabody {
+    background: linear-gradient(to right, #ffcccc, #ccccff);
+    margin: 20px;
+    padding-bottom: 200px;
+    padding-top: 20px;
+    border: 2px solid black;
+    border-radius: 20px;
+    font-size: 20px;
+    text-align: center;
+}
+.contactform {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+}
+.webformimage {
+    display: block;
+    margin-left: auto;
+    height: auto;
+    width: 50%;
+    border: 2px solid black;
+    position: relative;
+    top:30px;
+    left: 100px;
+}
