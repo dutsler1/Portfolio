@@ -1,6 +1,26 @@
-#homepagebody {
+#global-reset, html, body {
+    box-sizing: border-box;
+}
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+body {
     font-family: Arial, sans-serif;
-    margin: 20px;
+    margin: 0;
+    background-color: #f5f5f5;
+    color: #222;
+    line-height: 1.4;
+}
+
+/* Page wrapper to keep consistent horizontal padding */
+.site-wrapper {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+    background: transparent;
+}
+
+#homepagebody {
     background-color: #908e8e;
 }
 #homepageheader {
@@ -14,7 +34,6 @@
     justify-content: center;
     gap: 15px;
     margin-bottom: 20px;
-    
 }
 #navlinks a:hover {
     color: red;
@@ -24,12 +43,13 @@
 }
 .denverh1 {
     text-align: center;
-    color: blue;
-    font-size: 60px ;
-
+    color: #0b5bd7;
+    font-size: 3.5rem;
+    margin: 0.5rem 0;
 }
 .denverbody {
     background-color: #2e2e2e;
+    color: #fff;
 }
 .denverfooter {
     background-color: white;
@@ -41,29 +61,23 @@
 
 }
 .coorsimage {
-    object-fit: cover;
-    width: 600px;
-    height: 400px;
-    border: 2px solid black;
-    float: right;
-
-
+    max-width: 100%;
+    height: auto;
+    border: 2px solid #000;
+    display: block;
+    margin: 0 0 1rem 0;
 }
 .capitalparagraph {
-    font-size: 20px;
-    position: relative;
-    left: 30px;
-    margin: 20px;
-    color: white;
-    clear: both;
+    font-size: 1.125rem;
+    margin: 1rem 0;
+    color: inherit;
 }
 .denverlist {
-    color: white;
-    position: relative;
-    left: 5px;
+    color: inherit;
+    padding-left: 1rem;
 }
 .denverlist li {
-    margin: 40px;
+    margin: .5rem 0;
 }
 .citelist {
     font-size: 12px;
@@ -71,34 +85,33 @@
     text-align: center;
     
 }
-h3 {
+.site-heading h3 {
     text-decoration: underline;
-    font-size: medium;
-    position: relative;
-    left: 100px;
+    font-size: 1rem;
 }
-#parkerbody {
+/* Parker background container - prefer applying to wrapper, not body */
+.parker-hero {
     background-image: url("images/parkerimage.jpg");
     background-size: cover;
-    background-position: center 50px;
+    background-position: center;
     background-repeat: no-repeat;
-    background-size: 100% 240%;
+    padding: 20px;
+    border-radius: 6px;
+}
 
-}  
-body::before {
+.site-wrapper::before {
+    /* subtle vignette to make text readable on light backgrounds */
     content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(255, 255, 255, 0.336);
-    z-index: -1; 
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(rgba(255,255,255,0.02), rgba(255,255,255,0.02));
+    pointer-events: none;
 }
 .parkerh1 { 
     text-align: center;
     color: black;
-    font-size: 60px ;
+    font-size: 2.5rem;
+    margin: 0.5rem 0;
 }
 #parkerbody {
     margin: 20px;
@@ -112,13 +125,14 @@ body::before {
     align-items: center;
 }
 .paragraphparker {
-    word-spacing: 10px;
-    background-color: rgba(255, 255, 255, 0.435);
-    padding-bottom: 20px;
-    font-size: larger;
+    word-spacing: 2px;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 1rem;
+    font-size: 1rem;
+    color: #000;
+    border-radius: 6px;
 }
 .parkerfooter nav {
-    position: center;
     gap: 30px;
     display: flex;
     justify-content: center;
@@ -128,11 +142,12 @@ body::before {
     display: grid;
     grid-template-columns: 1fr 2fr;
     gap: 10px 5px;
-    align-items: left;
-    border: black 2px solid;
-    background-color: rgba(255, 255, 255, 0.336);
-    width: 500px;
-
+    align-items: start;
+    border: 2px solid #000;
+    background-color: rgba(255, 255, 255, 0.9);
+    max-width: 700px;
+    margin: 1rem auto;
+    padding: .5rem;
 }
 .question {
     border-right: 2px solid black;
@@ -147,31 +162,27 @@ body::before {
     text-align: center;
     font-size: 150%;
 }
-h3 {
+.section-title {
     text-align: center;
-    border: 2px solid black;
-    left: 100px;
+    border: 2px solid #000;
+    padding: .25rem .5rem;
+    display: inline-block;
 }
 .footer-table {
-    border: 2px solid black;
-    margin-left: 200px;
-    position: relative;
-    bottom: 90px;}
-    
-.footer-table div {
-    border-right: 2px solid black;
-    color: red;
-    text-decoration: none;
+    border: 2px solid #000;
+    margin: 1rem auto;
+    width: 100%;
+    max-width: 800px;
 }
+    
 .footer-table td {
-    border-bottom: 2px solid black;
-
+    border-bottom: 2px solid #000;
 }
 .thirdtd {
-    border-left: 2px solid black;
+    border-left: 2px solid #000;
 }
 th {
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid #000;
 }
 .auroraheader {
     text-align: center;
@@ -180,45 +191,102 @@ th {
 }
 .auroraimg {
     display: block;
-    margin-left: auto;
+    margin: 1rem auto;
     height: auto;
-    width: 50%;
-    border: 2px solid black;
-    position: relative;
-    top:30px;
+    width: 70%;
+    border: 2px solid #000;
 }
 .auroraol {
     max-width: 500px;
     display: block;
-    position: relative;
-    bottom: 300px;
-    border: 4px solid black;
-    border-radius: 40px;
+    margin: 1rem auto;
+    border: 4px solid #000;
+    border-radius: 16px;
     width: fit-content;
+    padding: .5rem 1rem;
 }
 .aurorabody {
     background: linear-gradient(to right, #ffcccc, #ccccff);
     margin: 20px;
-    padding-bottom: 200px;
-    padding-top: 20px;
-    border: 2px solid black;
-    border-radius: 20px;
-    font-size: 20px;
+    padding: 20px;
+    border: 2px solid #000;
+    border-radius: 12px;
+    font-size: 1rem;
     text-align: center;
 }
 .contactform {
     display: flex;
     flex-direction: column;
-    max-width: 400px;
+    max-width: 480px;
     margin: 0 auto;
+    gap: .5rem;
 }
+.contactform label {
+    font-weight: 600;
+    margin-bottom: .25rem;
+}
+.contactform input[type="text"],
+.contactform input[type="email"],
+.contactform textarea {
+    width: 100%;
+    padding: .5rem .6rem;
+    border: 1px solid #bbb;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+.contactform textarea { resize: vertical; min-height: 100px; }
+.contact-card {
+    background: #fff;
+    padding: 1rem 1.25rem;
+    border-radius: 8px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+    max-width: 640px;
+    margin: 0 auto 1rem auto;
+}
+.contactform .submit-btn {
+    background: #0b5bd7;
+    color: #fff;
+    padding: .6rem 1rem;
+    border: none;
+    border-radius: 6px;
+    font-weight: 700;
+    cursor: pointer;
+}
+.contactform .submit-btn:hover { background: #094fb5; }
+.webformaside {
+    max-width: 480px;
+    margin: 1rem auto;
+    background: rgba(255,255,255,0.95);
+    padding: .75rem 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+    color: #111;
+}
+.webformheader nav { display:flex; gap: 10px; justify-content:center; margin-bottom: .5rem; }
+.webformheader h1 { margin: .25rem 0 0 0; }
 .webformimage {
     display: block;
-    margin-left: auto;
+    margin: 1rem auto;
     height: auto;
-    width: 50%;
-    border: 2px solid black;
-    position: relative;
-    top:30px;
-    left: 100px;
+    width: 70%;
+    border: 2px solid #000;
 }
+
+/* Webform page hero background */
+.webform-hero {
+    background-image: url("images/colorado%20overview.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    padding: 40px 20px;
+}
+.webform-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.35); /* dark overlay for contrast */
+    z-index: 0;
+    border-radius: 6px;
+}
+.webform-hero > * { position: relative; z-index: 1; }
