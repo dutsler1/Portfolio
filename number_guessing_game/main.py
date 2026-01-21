@@ -6,12 +6,15 @@ print("Select a difficulty to continue: ")
 user_difficulty = input("easy, medium, or hard: ")
 print(f"You selected {user_difficulty} difficulty.")
 
-if user_difficulty not in valid_difficulties:
+if user_difficulty.lower() not in valid_difficulties:
     print("invalid difficulty level")
+    exit()
+    
 elif user_difficulty.lower() == 'easy':
     random_number = random_generator.get_random_number('easy')
     print('Choose a number between 1 and 100')
     user_number = int(input())
+    attempts += 1
     while user_number != random_number:
         attempts += 1
         if user_number < random_number:
@@ -26,7 +29,8 @@ elif user_difficulty.lower() == 'easy':
 elif user_difficulty.lower() == 'medium':
     random_number = random_generator.get_random_number('medium')
     print('Choose a number between 1 and 300')
-    user_number = int(input())
+    user_number = int(input()) 
+    attempts += 1
     while user_number != random_number:
         attempts += 1
         if user_number < random_number:
@@ -42,6 +46,7 @@ elif user_difficulty.lower() == 'hard':
     random_number = random_generator.get_random_number('hard')
     print('Choose a number between 1 and 1000')
     user_number = int(input())
+    attempts += 1
     while user_number != random_number:
         attempts += 1
         if user_number < random_number:
