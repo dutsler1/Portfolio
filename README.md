@@ -1,10 +1,24 @@
-OVERVIEW 
-this is a basic password generator using python that allows the user to have a auto generated password from a string of uppercase and lowercase letters, special characters, and numbers. The user is also allowed to create their own password with specific criteria utilizing at least one uppercase letter lowercase letter and a special character. The user is prompted with clear instructions prior to entering the password or auto generating it. 
+# Dylan Utsler's Portfolio
 
-FEATURES
-auto generate passwords 
-validate lengths between 10-16 characters, lowercase letters, uppercase letters, and special characters. 
+## About Me
+I am currently attending Western Governors University pursuing a bachelor's of science in software engineering. I am learning a lot of new skills in software and trying to grow my knowledge every day. My goal in obtaining this degree is to work in the tech industry and learn as much as I can and make a positive impact for the company I'll be hired on with.
 
-the main.py is for user input and validation, the password_generator.py holds the function for the automatic password generator. the chars.py contains character sets and default length configuration. 
+## Projects
 
-I tested the python on a macOS ensuring that it would not accept a password less than 10 characters, greater than 16 characters, missed uppercase letters, lowercase letters, and special characters. 
+### [Number Guessing Game](./number_guessing_game)
+Interactive Python game with multiple difficulty levels and attempt tracking.
+- **Tech:** Python
+- **Skills:** Functions, loops, user input validation, modules
+
+### [Password Generator](./password_generator)
+Secure password generator with customizable character requirements.
+- **Tech:** Python
+- **Skills:** String manipulation, random module, user input validation
+
+## Skills
+- **Languages:** Python
+- **Tools:** Git, GitHub, VS Code
+- **Currently Learning:** Software Engineering fundamentals at Western Governors University
+
+## Contact
+- GitHub: [@dutsler1](https://github.com/dutsler1)
