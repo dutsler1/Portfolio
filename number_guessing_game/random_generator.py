@@ -10,5 +10,3 @@ def get_random_number(difficulty):
         return random_number_medium
     elif difficulty.lower() == 'hard':
         return random_number_hard
-    else:
-        print("invalid difficulty level")
