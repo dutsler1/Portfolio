@@ -22,3 +22,4 @@ Secure password generator with customizable character requirements.
 
 ## Contact
 - GitHub: [@dutsler1](https://github.com/dutsler1)
+- Email: [dutsler1@gmail.com]
