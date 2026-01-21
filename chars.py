@@ -1,5 +1,7 @@
 
 # character sets for the password generator
+min_length = 10
+max_length = 16
 LOWERCASE_LETTERS = 'abcdefghijklmnopqrstuvwxyz'
 UPPERCASE_LETTERS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 DIGITS = '0123456789'
