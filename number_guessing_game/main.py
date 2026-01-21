@@ -5,11 +5,11 @@ attempts = 0
 print("Select a difficulty to continue: ")
 user_difficulty = input("easy, medium, or hard: ")
 print(f"You selected {user_difficulty} difficulty.")
-
+#checks the user input to see if it is in the valid difficulties list
 if user_difficulty.lower() not in valid_difficulties:
     print("invalid difficulty level")
     exit()
-    
+#this is the game logic for each difficulty level
 elif user_difficulty.lower() == 'easy':
     random_number = random_generator.get_random_number('easy')
     print('Choose a number between 1 and 100')
