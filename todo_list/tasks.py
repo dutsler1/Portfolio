@@ -42,4 +42,12 @@ def complete_task():
     save_tasks(tasks)
 def delete_task():
     #this function will delete a task from the list 
-    pass
+    tasks = load_tasks()
+    for task in tasks:
+        print(f"{task['id']} - {task['name']} - {'Completed' if task['completed'] else 'Pending'}")
+    tasks_id = int(input("Enter the task number to delete: "))
+    for task in tasks:
+        if task['id'] == tasks_id:
+            tasks.remove(task)
+            break
+    save_tasks(tasks)
