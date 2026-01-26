@@ -29,11 +29,17 @@ def add_task():
     tasks.append(new_task)
     save_tasks(tasks)
     
-
-    
 def complete_task():
     #this function will mark tasks as completed
-    pass
+    tasks = load_tasks()
+    for task in tasks:
+       print(f"{task['id']} - {task['name']} - {'Completed' if task['completed'] else 'Pending'}")
+    tasks_id = int(input("Enter the task number to mark as completed: "))
+    for task in tasks:
+        if task['id'] == tasks_id:
+            task['completed'] = True
+            break
+    save_tasks(tasks)
 def delete_task():
     #this function will delete a task from the list 
     pass
