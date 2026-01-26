@@ -6,6 +6,7 @@ def load_tasks():
     #this function will read tasks from file or return an empty list if file doesnt exist
     if os.path.exists(TASKS_FILE):
         try:
+            # opens tasks.json in read mode and assigns it to file
             with open(TASKS_FILE, 'r') as file:
                 return json.load(file)
         except:
@@ -26,6 +27,7 @@ def add_task():
         "name": name,
         "completed": False
     }
+    # appends the new task to tasks list
     tasks.append(new_task)
     save_tasks(tasks)
     
