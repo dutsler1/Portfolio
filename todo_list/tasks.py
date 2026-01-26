@@ -21,11 +21,11 @@ def add_task():
     tasks = load_tasks()
     name = input("Enter task name: ")
     new_id = tasks[-1]["id"] + 1 if tasks else 1
-    new_task = [
+    new_task = {
         "id": new_id,
         "name": name,
         "completed": False
-    ]
+    }
     tasks.append(new_task)
     save_tasks(tasks)
     
