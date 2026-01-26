@@ -49,7 +49,16 @@ def view_by_category():
             print(f"{expense['id']} - {expense['name']} - ${expense['amount']} - {expense['date']}")
 
 def total_spent():
-    #calculates total amount spent
+    #calculates total amount spent and category specific totals
     expenses = load_expenses()
     total = sum(expense['amount'] for expense in expenses)
-    print(f"Total spent: ${total}")
+    category_total = {}
+    for expense in expenses:
+        cat = expense['category']
+        if cat in category_total:
+            category_total[cat] += expense['amount']
+        else:
+            category_total[cat] = expense['amount']
+    for category, amount in category_total.items():
+        print(f"{category}: ${amount:.2f}")
+    print(f"\nTotal spent: ${total:.2f}")
