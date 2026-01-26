@@ -1,1 +1,1 @@
-[{"id": 1, "name": "Test", "completed": false}]
+[{"id": 1, "name": "Test", "completed": false}, {"id": 2, "name": "dishes", "completed": true}, {"id": 3, "name": "laundry", "completed": false}]
