@@ -33,4 +33,13 @@ def add_expense():
     }
     expenses.append(new_expense)
     save_expenses(expenses)
+
+    def view_expenses():
+        #displays all expenses
+        expenses = load_expenses()
+        for expense in expenses:
+            print(f"{expense['id']} - {expense['name']} - ${expense['amount']} - {expense_category['category']} - {expense['date']}")
+    
+    def view_by_category():
+        pass
     
