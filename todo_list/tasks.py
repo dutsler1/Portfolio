@@ -18,7 +18,19 @@ def save_tasks(tasks):
         json.dump(tasks, file)
 def add_task():
     #this function will add a new task to the list
-    pass
+    tasks = load_tasks()
+    name = input("Enter task name: ")
+    new_id = tasks[-1]["id"] + 1 if tasks else 1
+    new_task = [
+        "id": new_id,
+        "name": name,
+        "completed": False
+    ]
+    tasks.append(new_task)
+    save_tasks(tasks)
+    
+
+    
 def complete_task():
     #this function will mark tasks as completed
     pass
