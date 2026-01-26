@@ -14,7 +14,7 @@ def load_expenses():
         return []
 def save_expenses(expenses):
     #this function will save expenses to the JSON file
-    with open(expenses, 'w') as file:
+    with open(expenses_file, 'w') as file:
         json.dump(expenses, file)
 def add_expense():
     #this function allows a new expense to be added
