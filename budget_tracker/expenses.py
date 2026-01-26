@@ -34,12 +34,22 @@ def add_expense():
     expenses.append(new_expense)
     save_expenses(expenses)
 
-    def view_expenses():
-        #displays all expenses
-        expenses = load_expenses()
-        for expense in expenses:
-            print(f"{expense['id']} - {expense['name']} - ${expense['amount']} - {expense_category['category']} - {expense['date']}")
+def view_expenses():
+    #displays all expenses
+    expenses = load_expenses()
+    for expense in expenses:
+        print(f"{expense['id']} - {expense['name']} - ${expense['amount']} - {expense['category']} - {expense['date']}")
     
-    def view_by_category():
-        pass
-    
+def view_by_category():
+    #displays expenses by category
+    expenses = load_expenses()
+    category = input("Enter category to filter by: ")
+    for expense in expenses:
+        if expense['category'].lower() == category.lower():
+            print(f"{expense['id']} - {expense['name']} - ${expense['amount']} - {expense['date']}")
+
+def total_spent():
+    #calculates total amount spent
+    expenses = load_expenses()
+    total = sum(expense['amount'] for expense in expenses)
+    print(f"Total spent: ${total}")
