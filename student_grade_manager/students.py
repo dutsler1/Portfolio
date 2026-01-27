@@ -54,4 +54,14 @@ def sort_students_by_grade():
         print(f"({student['id']}) {student['name']} - GPA: {gpa:.2f}")
 
     
-#def remove_student()
+def remove_student():
+    students = load_students()
+    if not students:
+        print("No students found.")
+        return
+    for student in students:
+        student_name = input("Enter the name of the student to remove: ")
+        if student['name'].lower() == student_name.lower():
+            students.remove(student)
+            break
+    save_students(students)
