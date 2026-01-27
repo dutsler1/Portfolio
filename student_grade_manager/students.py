@@ -38,5 +38,20 @@ def view_all_students():
     for student in students:
         print(f"({student['id']}) {student['name']} - Grades: {student['grades']}")
     
-#def sort_students_by_grade()
+def sort_students_by_grade():
+    students = load_students()
+    if not students:
+        print("No students found.")
+        return
+    def calc_gpa(student):
+        if student['grades']:
+            return sum(student['grades'].values()) / len(student['grades'])
+        else:
+            return 0
+    students.sort(key=calc_gpa, reverse=True)
+    for student in students:
+        gpa = calc_gpa(student)
+        print(f"({student['id']}) {student['name']} - GPA: {gpa:.2f}")
+
+    
 #def remove_student()
