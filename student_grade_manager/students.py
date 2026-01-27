@@ -27,7 +27,9 @@ def add_student():
         "grades": {}
     }
     students.append(new_student)
+    students.sort(key=lambda student: student['name'])
     save_students(students)
+
 def view_all_students():
     students = load_students()
     if not students:
@@ -35,12 +37,6 @@ def view_all_students():
         return
     for student in students:
         print(f"({student['id']}) {student['name']} - Grades: {student['grades']}")
-
-def sort_by_name():
-    students = load_students()
-    students.sort(key=lambda student: student['name'])
-    for student in students: 
-        print(f"{student['id']} - {student['name']} - Grades: {student['grades']}")
     
 #def sort_students_by_grade()
 #def remove_student()
