@@ -1,27 +1,63 @@
-# MyApp
+# My App Portfolio Project
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.2.3.
+This repository is a school project I used to learn the basics of Angular and TypeScript.
 
-## Development server
+The primary project structure and some functionality were provided as a guide/starter, and my main hands-on work focused on building and styling the UI with HTML and CSS.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Project Summary
 
-## Code scaffolding
+- Built as a beginner Angular project for class
+- Used guided/pre-built starter code for core setup
+- Practiced Angular fundamentals (components, routing, project structure)
+- Focused heavily on front-end presentation and layout
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## My Contributions
 
-## Build
+Most of my direct work was in:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- Component HTML templates
+- Component CSS styling
+- Page layout and visual presentation
 
-## Running unit tests
+Primary sections include:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- Home
+- Projects
+- Services
+- Contact
 
-## Running end-to-end tests
+## Tech Stack
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+- Angular 17
+- TypeScript
+- HTML
+- CSS
 
-## Further help
+## Getting Started
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+### 1. Install dependencies
+
+```bash
+npm install
+```
+
+### 2. Run the app
+
+```bash
+npm start
+```
+
+The app will be available at:
+
+`http://localhost:4200/`
+
+## Available Scripts
+
+- `npm start` — Run the Angular dev server
+- `npm run build` — Create a production build
+- `npm test` — Run unit tests
+
+## Notes
+
+This project represents my early learning phase with Angular and TypeScript, with emphasis on front-end styling and structure rather than building the entire application from scratch.
+
