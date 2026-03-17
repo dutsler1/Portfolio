@@ -1,14 +1,28 @@
+<div>
+    <h2 class="projectTitle">Dynamic Business Card</h2>
+    <hr>
+    <form>
+        <fieldset>
+            <Legend>Modify Your Business Card</Legend>
+            <label>First Name</label><input id="firstNameInput" (input)="setProperty($event)"><br>
+            <label>Last Name</label><input id="lastNameInput" (input)="setProperty($event)"><br>
+            <label>Phone Number</label><input id="phoneNumberInput" (input)="setProperty($event)">
+        </fieldset>
+    </form>
+</div>
+
+
 <button class="card">
     <div class="rowclearfix">
-        <div class="left big">720-297-0078</div>
+        <div class="left big">{{phoneNumber}}</div>
         <div class="right">
             <p><span class="big">A</span>rapahoe <span class="big">C</span>ounty</p>
-            <p><span class="med no-space">C</span><span class="small no-space">urrently </span>
-            <span class="med no-space">B</span><span class="small no-space">lank</span></p>
+            <p><span class="med no-space">S</span><span class="small no-space">heriff's </span>
+            <span class="med no-space">O</span><span class="small no-space">ffice</span></p>
         </div>
     </div>
     <div class="row">
-        <p class="capilize">Dylan <span class="capilize">Utsler</span></p>
+        <p class="capilize">{{firstName}} <span class="capilize">{{lastName}}</span></p>
         <p class="capilize">Software <span class="capilize">Engineer </span>student</p>
     </div>
     <div class="row">
